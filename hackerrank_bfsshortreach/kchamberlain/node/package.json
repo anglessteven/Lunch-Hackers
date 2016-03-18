@@ -1,0 +1,15 @@
+{
+  "name": "hackerrank_bfsshortreach",
+  "version": "1.0.0",
+  "description": "lunchhackers breadth first search",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kyle Chamberlain",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.6.1"
+  }
+}
