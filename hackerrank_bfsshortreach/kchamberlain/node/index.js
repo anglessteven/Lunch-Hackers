@@ -18,7 +18,7 @@ const
       .compact()
       .map(splitBySpace)
       .map(parseInts)
-      .value();
+      .value()
   }
 
-console.log(parseTests(cases));
+console.log(parseTests(cases))
