@@ -39,7 +39,6 @@ const
     start: _.last(arr)[0],
     edges: inside(arr)
   }),
-  parseCases = arr => arr.map(parseCase),
   parseTests = str => {
     return _.chain(str)
       .thru(splitByLine)
@@ -47,7 +46,7 @@ const
       .map(splitBySpace)
       .map(parseInts)
       .thru(splitCases)
-      .thru(parseCases)
+      .map(parseCase)
       .value()
   }
 
