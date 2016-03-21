@@ -1,7 +1,5 @@
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Solution {
 
@@ -36,12 +34,12 @@ public class Solution {
     }
 
     private static void bfsShortReach(Node[] nodes, int start) {
-        ArrayList<Node> q = new ArrayList<>();
+        Queue<Node> q = new LinkedList<>();
 
         q.add(nodes[start - 1]); // 1-based indexes are so stupid
 
         while (!q.isEmpty()) {
-            Node cur = q.remove(0);
+            Node cur = q.remove();
 
             for (Node neighbor : cur.neighbors) {
                 if (neighbor.distance == -1) {
