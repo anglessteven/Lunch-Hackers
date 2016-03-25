@@ -1,55 +1,57 @@
-const _ = require('lodash')
+const r = require('ramda');
 const cases = require('fs')
   .readFileSync('../cases.txt')
   .toString()
 
 const
-  splitBySpace = str => _.compact(str.split(' ')),
-  splitByLine = str => str.split(/\n/),
-  parseInts = arr => arr.map(_.parseInt),
-  hasOneElement = arr => _.isEqual(_.size(arr), 1),
-  emptyArrays = count => _.times(count, () => []),
-  inside = arr => _.without(arr, _.head(arr), _.last(arr)),
-  partition = (arr, init) => {
-    return _.reduce(arr, (result, item) => {
+  useless = r.anyPass([r.isEmpty, r.isNil]),
+  compact = r.reject(useless),
+  splitBySpace = r.compose(compact, r.split(' ')),
+  splitByLine = r.compose(compact, r.split('\n')),
+  splitLinesBySpaces = r.map(splitBySpace),
+  parseInts = r.wrap(r.map(parseInt), r.map),
+  hasOneElement = r.compose(r.equals(1), r.length),
+  emptyArrays = r.times(() => []),
+  fst = r.compose(r.head, r.head),
+  snd = r.compose(r.nth(1), r.head),
+  startNode = r.compose(r.head, r.last),
+  inside = arr => r.without([r.head(arr), r.last(arr)], arr),
+  splitCases = arr => {
+    const
+      caseCount = fst(arr),
+      cases = r.tail(arr),
+      init = {
+        cases: emptyArrays(caseCount),
+        index: 0,
+        endOfCase: false
+      }
+
+    const reduction = r.reduce((result, item) => {
       const index = result.endOfCase ? result.index + 1 : result.index
       result.cases[index].push(item)
 
-      return _.extend({}, result, {
+      return r.merge(result, {
         index,
         cases: result.cases,
-        endOfCase: hasOneElement(item),
-      });
-    }, init).cases
-  },
-  splitCases = arr => {
-    const
-      caseCount = arr[0][0],
-      cases = _.drop(arr)
+        endOfCase: hasOneElement(item)
+      })
+    }, init, cases)
 
-    return partition(cases, {
-      cases: emptyArrays(caseCount),
-      index: 0,
-      endOfCase: false
-    })
+    return reduction.cases
   },
-  parseCase = arr => ({
-    nodeCount: _.head(arr)[0],
-    edgeCount: _.head(arr)[1],
-    start: _.last(arr)[0],
+  parseTestCases = r.map(arr => ({
+    nodeCount: fst(arr),
+    edgeCount: snd(arr),
+    start: startNode(arr),
     edges: inside(arr)
-  }),
-  parseTests = str => {
-    return _.chain(str)
-      .thru(splitByLine)
-      .compact()
-      .map(splitBySpace)
-      .map(parseInts)
-      .thru(splitCases)
-      .map(parseCase)
-      .value()
-  }
+  })),
 
-console.log(JSON.stringify(
-  parseTests(cases)
-))
+  parseInput = r.compose(
+    parseTestCases,
+    splitCases,
+    parseInts,
+    splitLinesBySpaces,
+    splitByLine
+  )
+
+console.log(JSON.stringify(parseInput(cases)))

@@ -1,10 +1,10 @@
 {
-  "name": "hackerrank_bfsshortreach",
+  "name": "maximizing-xor",
   "version": "1.0.0",
-  "description": "lunchhackers breadth first search",
-  "main": "index.js",
+  "description": "lunchhackers maximizing xor",
+  "main": "xor.js",
   "scripts": {
-    "start": "node index",
+    "start": "node xor",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kyle Chamberlain",
