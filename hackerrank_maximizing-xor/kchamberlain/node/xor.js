@@ -13,18 +13,18 @@ const
   xor = r.apply((a, b) => a ^ b),
   mapXor = r.map(xor),
 
-  // Solver
+  // Solver (values are passed to last function, and piped to first) 
   maxXor = r.compose(
-    maxInList,
-    mapXor,
-    validPairs,
-    allCombos,
-    twins,
-    makeRange
+    maxInList,  // find max value in list
+    mapXor,     // map each pair to xor value
+    validPairs, // filter list to satisfy `L ≤ A ≤ B ≤ R`
+    allCombos,  // find all combos each range's values
+    twins,      // return two copies of the range
+    makeRange   // make a range like (L, ...R)
   ),
 
-  solvePair = r.apply(maxXor),
-  solveCases = r.map(solvePair)
+  solvePair = r.apply(maxXor),  // get solution from a tuple rather than ordered args
+  solveCases = r.map(solvePair) // map solutions for a list of test case tuples
 
 /**
  * The following will construct an array of solutions from the test cases
