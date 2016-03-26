@@ -11,8 +11,6 @@ We go through our solutions one by one for the group to explain and hopefully pr
 
 1. Sign up on HackerRank so that you can submit your solutions and verify they’re right. _(optional)_
 
----
-
 ## Challenges:
 Each week there are two, do one or both.
 
