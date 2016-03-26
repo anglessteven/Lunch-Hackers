@@ -5,7 +5,7 @@ There are two problems each week that the group will try to solve for the next F
 We go through our solutions one by one for the group to explain and hopefully propagate knowledge.
 
 # Get Started
-1. Send your existing username to *@steven.angles* has your username so he can add you to the repo.
+1. Send your github username to *@steven.angles* so he can add you to the repo.
 
 1. The directory structure should be fairly self explanatory — challenge/author/code
 
