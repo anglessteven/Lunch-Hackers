@@ -1,7 +1,5 @@
 # Lunch-Hackers
 
----
-
 # Summary
 There are two problems each week that the group will try to solve for the next Friday.
 We go through our solutions one by one for the group to explain and hopefully propagate knowledge.
