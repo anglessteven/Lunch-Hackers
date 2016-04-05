@@ -14,7 +14,7 @@ We go through our solutions one by one for the group to explain and hopefully pr
 ## Challenges:
 Each week there are two, do one or both.
 
-  - 2016-04-01:
+  - 2016-04-08:
     - [keyword-transposition-cipher](https://www.hackerrank.com/challenges/keyword-transposition-cipher)
     - [kitty-and-katty](https://www.hackerrank.com/challenges/kitty-and-katty)
 
