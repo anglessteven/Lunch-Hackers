@@ -6,7 +6,7 @@ int maxXor(int l, int r) {
 
     for ( int left = l; left <= r; ++left){
         for ( int right = r; right >= l; --right){
-            if ( (left ^ right) > max) max = left ^ right;
+            max = (left ^ right) > max ? left ^ right : max;
         }
     }
 
