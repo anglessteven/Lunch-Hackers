@@ -1,13 +1,15 @@
 #!/bin/ruby
 
+def split_into_columns(arr, col_count)
+  return arr.each_slice(col_count).map {|a| a.fill nil, a.size, col_count - a.size}.transpose.map(&:compact)
+end
+
 def build_cipher(key)
   key_letters = key.scan(/\w/).uniq
   alphabet = ('A'..'Z').to_a
   other_letters = alphabet - key_letters
   columns = []
-  new_order = key_letters + other_letters
-  new_order = new_order.each_slice(key_letters.length).map {|a| a.fill nil, a.size, key_letters.length - a.size}.transpose.map(&:compact)
-  new_order.sort!.flatten!
+  new_order = split_into_columns(key_letters + other_letters, key_letters.length).sort!.flatten!
   cipher = {' ' => ' '}
   new_order.zip(alphabet).each { |k, v| cipher[k] = v }
   return cipher
