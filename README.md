@@ -1,4 +1,4 @@
-# Lunch-Hackers has moved. Go [here](https://github.com/anglessteven/Lunch-Hackers.git) for lunch hacking!
+# Lunch-Hackers
 
 # Summary
 There are some number of problems each week that the group will try to solve for the next Friday.
