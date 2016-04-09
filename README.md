@@ -5,14 +5,21 @@ There are two problems each week that the group will try to solve for the next F
 We go through our solutions one by one for the group to explain and hopefully propagate knowledge.
 
 # Get Started
-1. Send your github username to *@steven.angles* so he can add you to the repo.
+1. Fork this repository.
 
 1. The directory structure should be fairly self explanatory — challenge/author/code
+
+1. Create a pull request into this repository when you've solved a challenge. This will facilitate review of the challenge by others.
 
 1. Sign up on HackerRank so that you can submit your solutions and verify they’re right. _(optional)_
 
 ## Challenges:
-Each week there are two, do one or both.
+Each week there are some number of challenges, do as many as you feel comfortable doing.
+
+  - 2016-04-15:
+    - [prefix-compression](https://www.hackerrank.com/challenges/prefix-compression)
+    - [kmp-fp](https://www.hackerrank.com/challenges/prefix-compression)
+    - [brainf-k-interpreter-fp](https://www.hackerrank.com/challenges/brainf-k-interpreter-fp)
 
   - 2016-04-08:
     - [keyword-transposition-cipher](https://www.hackerrank.com/challenges/keyword-transposition-cipher)
