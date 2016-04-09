@@ -18,7 +18,7 @@ Each week there are some number of challenges, do as many as you feel comfortabl
 
   - 2016-04-15:
     - [prefix-compression](https://www.hackerrank.com/challenges/prefix-compression)
-    - [kmp-fp](https://www.hackerrank.com/challenges/prefix-compression)
+    - [kmp-fp](https://www.hackerrank.com/challenges/kmp-fp)
     - [brainf-k-interpreter-fp](https://www.hackerrank.com/challenges/brainf-k-interpreter-fp)
 
   - 2016-04-08:
