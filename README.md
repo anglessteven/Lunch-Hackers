@@ -1,7 +1,7 @@
 # Lunch-Hackers has moved. Go [here](https://github.com/anglessteven/Lunch-Hackers.git) for lunch hacking!
 
 # Summary
-There are two problems each week that the group will try to solve for the next Friday.
+There are some number of problems each week that the group will try to solve for the next Friday.
 We go through our solutions one by one for the group to explain and hopefully propagate knowledge.
 
 # Get Started
