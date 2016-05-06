@@ -1,0 +1,1 @@
+puts STDIN.read.force_encoding("UTF-8").scan(/\b\w+(?:\.\w+)*@\w+(?:\.\w+)+\b/).uniq.sort.join(";")
