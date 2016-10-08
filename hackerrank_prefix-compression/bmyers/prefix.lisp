@@ -1,0 +1,10 @@
+(defun get-prefix (x y index)
+  (if (or (>= index (length x))
+          (>= index (length y))
+          (char/= (char x index) (char y index)))
+      (progn (format t "~S ~A~%" (length (subseq x 0 index)) (subseq x 0 index))
+             (format t "~S ~A~%" (length (subseq x index)) (subseq x index))
+             (format t "~S ~A~%" (length (subseq y index)) (subseq y index)))
+      (get-prefix x y (1+ index))))
+
+(get-prefix (read-line) (read-line) 0)
