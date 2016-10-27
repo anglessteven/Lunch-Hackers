@@ -1,8 +1,12 @@
 # Lunch-Hackers
 
 # Summary
-There are some number of problems each week that the group will try to solve for the next Friday.
-We go through our solutions one by one for the group to explain and hopefully propagate knowledge.
+
+Every two weeks, we will have a few problems that the group will try to solve. After the two weeks are up (technically on a Friday evening), we will schedule a weekend video call at some time that is convenient for everyone who has submitted a solution (hopefully this will settle into a particular time with some regularity).
+
+Each week's problems will be listed in this repo.
+
+To get added to our private list of people for the video call, just open an issue here and we will get you on it.
 
 # Get Started
 1. Fork this repository.
@@ -31,3 +35,7 @@ Each week there are some number of challenges, do as many as you feel comfortabl
 
   - 2016-03-18:
     - [bfsshortreach](https://www.hackerrank.com/challenges/bfsshortreach)
+
+  - 2016-11-11:
+    - [PRNG Sequence Guessing](https://www.hackerrank.com/challenges/prng-sequence-guessing) (rated easy)
+    - [New Year Chaos](https://www.hackerrank.com/challenges/new-year-chaos)
